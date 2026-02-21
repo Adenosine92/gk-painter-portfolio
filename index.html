@@ -1,13 +1,13 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pl">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Grażyna Krzemińska — Polish painter. Original oil paintings rooted in the Pre-Raphaelite tradition, evolving into a singular contemporary vision.">
-  <meta property="og:title" content="Grażyna Krzemińska — Painter">
-  <meta property="og:description" content="Original oil paintings rooted in the Pre-Raphaelite tradition, evolving into a singular contemporary vision.">
+  <meta name="description" content="Grażyna Krzemińska — polska malarka. Oryginalne obrazy olejne zakorzenione w tradycji prerafaelickiej, ewoluujące ku singularnemu współczesnemu widzeniu.">
+  <meta property="og:title" content="Grażyna Krzemińska — Malarka">
+  <meta property="og:description" content="Oryginalne obrazy olejne zakorzenione w tradycji prerafaelickiej, ewoluujące ku singularnemu współczesnemu widzeniu.">
   <meta property="og:type" content="website">
-  <title>Grażyna Krzemińska — Painter</title>
+  <title>Grażyna Krzemińska — Malarka</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=EB+Garamond:ital,wght@0,400;0,500;1,400;1,500&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
@@ -19,22 +19,30 @@
        NAVIGATION
   ============================================================ -->
   <header class="site-header" id="site-header" role="banner">
-    <nav class="navbar" aria-label="Main navigation">
-      <a href="#home" class="navbar__logo" aria-label="Grażyna Krzemińska — Home">
+    <nav class="navbar" aria-label="Nawigacja główna">
+      <a href="#home" class="navbar__logo" aria-label="Grażyna Krzemińska — Strona główna">
         <span class="navbar__logo-name">Grażyna Krzemińska</span>
-        <span class="navbar__logo-subtitle">Painter</span>
+        <span class="navbar__logo-subtitle" data-i18n="logo.subtitle">Malarka</span>
       </a>
-      <button class="navbar__toggle" aria-expanded="false" aria-controls="navbar-menu" aria-label="Open menu">
+
+      <!-- Language switcher -->
+      <div class="lang-switch" role="group" aria-label="Wybór języka">
+        <button class="lang-btn is-active" data-lang="pl" aria-pressed="true">PL</button>
+        <span class="lang-sep" aria-hidden="true">·</span>
+        <button class="lang-btn" data-lang="en" aria-pressed="false">EN</button>
+      </div>
+
+      <button class="navbar__toggle" aria-expanded="false" aria-controls="navbar-menu" aria-label="Otwórz menu">
         <span class="hamburger-line"></span>
         <span class="hamburger-line"></span>
         <span class="hamburger-line"></span>
       </button>
       <ul class="navbar__menu" id="navbar-menu" role="list">
-        <li><a href="#home"        class="navbar__link" data-section="home">Home</a></li>
-        <li><a href="#about"       class="navbar__link" data-section="about">About</a></li>
-        <li><a href="#portfolio"   class="navbar__link" data-section="portfolio">Portfolio</a></li>
-        <li><a href="#collections" class="navbar__link" data-section="collections">Collections</a></li>
-        <li><a href="#contact"     class="navbar__link navbar__link--cta" data-section="contact">Contact</a></li>
+        <li><a href="#home"        class="navbar__link" data-section="home"        data-i18n="nav.home">Strona główna</a></li>
+        <li><a href="#about"       class="navbar__link" data-section="about"       data-i18n="nav.about">O artystce</a></li>
+        <li><a href="#portfolio"   class="navbar__link" data-section="portfolio"   data-i18n="nav.portfolio">Portfolio</a></li>
+        <li><a href="#collections" class="navbar__link" data-section="collections" data-i18n="nav.collections">Kolekcje</a></li>
+        <li><a href="#contact"     class="navbar__link navbar__link--cta" data-section="contact" data-i18n="nav.contact">Kontakt</a></li>
       </ul>
     </nav>
   </header>
@@ -44,25 +52,24 @@
     <!-- ============================================================
          HERO
     ============================================================ -->
-    <section class="hero" id="home" aria-label="Featured work">
+    <section class="hero" id="home" aria-label="Wyróżniona praca">
       <div class="hero__background">
-        <!-- Replace this div with <img src="images/hero/hero-painting.jpg" alt="..."> when ready -->
         <div class="hero__image-placeholder" aria-hidden="true"></div>
         <div class="hero__overlay" aria-hidden="true"></div>
         <div class="hero__parallax-layer" aria-hidden="true"></div>
       </div>
       <div class="hero__content">
-        <p class="hero__eyebrow">Original Oil Paintings</p>
+        <p class="hero__eyebrow" data-i18n="hero.eyebrow">Oryginalne Obrazy Olejne</p>
         <h1 class="hero__name">Grażyna<br>Krzemińska</h1>
-        <p class="hero__tagline">Where the Pre-Raphaelite dream<br>meets the contemporary gaze</p>
+        <p class="hero__tagline" data-i18n="hero.tagline">Gdzie prerafaelicki sen spotyka współczesne spojrzenie</p>
         <div class="hero__cta-group">
-          <a href="#portfolio" class="btn btn--gold">View Portfolio</a>
-          <a href="#about"     class="btn btn--ghost">About the Artist</a>
+          <a href="#portfolio" class="btn btn--gold"  data-i18n="hero.cta.portfolio">Zobacz Portfolio</a>
+          <a href="#about"     class="btn btn--ghost" data-i18n="hero.cta.about">O Artystce</a>
         </div>
       </div>
       <div class="hero__scroll-indicator" aria-hidden="true">
         <span class="scroll-line"></span>
-        <span class="scroll-label">Scroll</span>
+        <span class="scroll-label" data-i18n="hero.scroll">Przewiń</span>
       </div>
     </section>
 
@@ -72,39 +79,30 @@
     <section class="about section" id="about" aria-labelledby="about-heading">
       <div class="section-container">
         <header class="section-header">
-          <p class="section-eyebrow">The Artist</p>
-          <h2 class="section-title" id="about-heading">About Grażyna</h2>
+          <p class="section-eyebrow" data-i18n="about.eyebrow">Artystka</p>
+          <h2 class="section-title" id="about-heading" data-i18n="about.heading">O Grażynie</h2>
           <div class="ornament" aria-hidden="true"><span>◆</span></div>
         </header>
 
         <div class="about__layout">
           <figure class="about__portrait reveal-element">
             <div class="about__portrait-frame">
-              <!-- Replace with <img src="images/about/portrait.jpg" alt="Grażyna Krzemińska in her studio"> -->
-              <div class="about__portrait-placeholder" aria-label="Artist portrait placeholder"></div>
+              <div class="about__portrait-placeholder" aria-label="Portret artystki"></div>
             </div>
-            <figcaption class="about__portrait-caption">Grażyna Krzemińska in her studio</figcaption>
+            <figcaption class="about__portrait-caption" data-i18n="about.caption">Grażyna Krzemińska w swojej pracowni</figcaption>
           </figure>
 
           <div class="about__text">
             <div class="about__statement reveal-element">
-              <p class="about__lead">
-                "My work begins in the same place the Pre-Raphaelites began — in a refusal to look away from the world's surface, its textures, its light, its melancholy weight."
-              </p>
+              <p class="about__lead" data-i18n="about.statement">„Moja praca zaczyna się w tym samym miejscu, w którym zaczynali Prerafaelici — w odmowie odwracania wzroku od powierzchni świata, jego tekstur, jego światła, jego melancholijnego ciężaru."</p>
             </div>
             <div class="about__bio reveal-element">
-              <p>
-                Grażyna Krzemińska is a Polish painter whose practice spans over three decades of dedicated studio work. Trained in the classical tradition, she came early to the art of the Pre-Raphaelite Brotherhood — drawn to their insistence on meticulous observation, the intensity of colour, and the capacity of paint to carry both beauty and sorrow simultaneously.
-              </p>
-              <p>
-                For years her work carried the unmistakable marks of that influence: the jewelled palette, the devotion to botanical detail, the female figure rendered with a gaze both tender and unflinching. Over time, however, those influences were metabolised into something distinctly her own — looser in places, stranger, willing to let silence inhabit the canvas alongside the image.
-              </p>
-              <p>
-                Today her paintings occupy a space between memory and presence. They remain richly chromatic, layered, and technically demanding — yet they resist easy narrative, offering instead a mood, an atmosphere, a feeling that lingers long after the image has been seen.
-              </p>
+              <p data-i18n="about.bio.p1">Grażyna Krzemińska jest polską malarką, której praktyka artystyczna obejmuje ponad trzy dekady intensywnej pracy w pracowni. Kształcona w tradycji klasycznej, wcześnie odkryła sztukę Bractwa Prerafaelitów — przyciągał ją ich upór w skrupulatnej obserwacji, intensywność barwy oraz zdolność farby do jednoczesnego niesienia piękna i smutku.</p>
+              <p data-i18n="about.bio.p2">Przez lata jej prace nosiły wyraźne ślady tych wpływów: klejnotowa paleta, nabożeństwo wobec szczegółu botanicznego, postać kobieca ukazana ze spojrzeniem czułym i nieunikającym. Z czasem jednak te wpływy zostały przetworzone w coś wyraźnie jej własnego — miejscami luźniejszego, bardziej osobliwego, gotowego wpuścić ciszę na płótno obok obrazu.</p>
+              <p data-i18n="about.bio.p3">Dziś jej obrazy zajmują przestrzeń między pamięcią a obecnością. Pozostają bogato chromatyczne, warstwowe i wymagające technicznie — jednak opierają się łatwej narracji, oferując zamiast tego nastrój, atmosferę, uczucie, które długo pozostaje po obejrzeniu obrazu.</p>
             </div>
             <div class="about__influences reveal-element">
-              <h3 class="about__influences-title">Inspirations</h3>
+              <h3 class="about__influences-title" data-i18n="about.inspirations.title">Inspiracje</h3>
               <ul class="about__influences-list">
                 <li>John Everett Millais</li>
                 <li>Dante Gabriel Rossetti</li>
@@ -114,7 +112,7 @@
                 <li>Marlene Dumas</li>
               </ul>
             </div>
-            <a href="#contact" class="btn btn--emerald reveal-element">Get in Touch</a>
+            <a href="#contact" class="btn btn--emerald reveal-element" data-i18n="about.cta">Napisz do mnie</a>
           </div>
         </div>
       </div>
@@ -126,38 +124,36 @@
     <section class="portfolio section section--ivory-alt" id="portfolio" aria-labelledby="portfolio-heading">
       <div class="section-container">
         <header class="section-header">
-          <p class="section-eyebrow">Works</p>
-          <h2 class="section-title" id="portfolio-heading">Portfolio</h2>
+          <p class="section-eyebrow" data-i18n="portfolio.eyebrow">Prace</p>
+          <h2 class="section-title" id="portfolio-heading" data-i18n="portfolio.heading">Portfolio</h2>
           <div class="ornament" aria-hidden="true"><span>◆</span></div>
         </header>
 
-        <div class="portfolio__filters" role="group" aria-label="Filter paintings by collection">
-          <button class="filter-btn filter-btn--active" data-filter="all">All Works</button>
-          <button class="filter-btn" data-filter="woven-forest">The Woven Forest</button>
-          <button class="filter-btn" data-filter="vigil">Vigil</button>
-          <button class="filter-btn" data-filter="remnants">Remnants</button>
-          <button class="filter-btn" data-filter="studies">Studies</button>
+        <div class="portfolio__filters" role="group" aria-label="Filtruj obrazy według kolekcji">
+          <button class="filter-btn filter-btn--active" data-filter="all"          data-i18n="portfolio.filter.all">Wszystkie Prace</button>
+          <button class="filter-btn"                    data-filter="woven-forest" data-i18n="portfolio.filter.woven">Utkany Las</button>
+          <button class="filter-btn"                    data-filter="vigil"        data-i18n="portfolio.filter.vigil">Czuwanie</button>
+          <button class="filter-btn"                    data-filter="remnants"     data-i18n="portfolio.filter.remnants">Pozostałości</button>
+          <button class="filter-btn"                    data-filter="studies"      data-i18n="portfolio.filter.studies">Studia</button>
         </div>
 
-        <div class="portfolio__grid" id="portfolio-grid" role="list" aria-label="Paintings gallery">
+        <div class="portfolio__grid" id="portfolio-grid" role="list" aria-label="Galeria obrazów">
           <!-- Populated by script.js -->
         </div>
       </div>
 
       <!-- LIGHTBOX -->
-      <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Artwork viewer" hidden>
+      <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Podgląd dzieła" hidden>
         <div class="lightbox__backdrop" id="lightbox-backdrop"></div>
         <div class="lightbox__container">
-          <button class="lightbox__close" id="lightbox-close" aria-label="Close artwork viewer">&times;</button>
-          <button class="lightbox__nav lightbox__prev" id="lightbox-prev" aria-label="Previous painting">&#8592;</button>
-          <button class="lightbox__nav lightbox__next" id="lightbox-next" aria-label="Next painting">&#8594;</button>
-          <div class="lightbox__image-area" id="lightbox-image-area">
-            <!-- Image injected by JS -->
-          </div>
+          <button class="lightbox__close" id="lightbox-close" data-i18n-aria="lightbox.close" aria-label="Zamknij podgląd">&times;</button>
+          <button class="lightbox__nav lightbox__prev" id="lightbox-prev" data-i18n-aria="lightbox.prev" aria-label="Poprzedni obraz">&#8592;</button>
+          <button class="lightbox__nav lightbox__next" id="lightbox-next" data-i18n-aria="lightbox.next" aria-label="Następny obraz">&#8594;</button>
+          <div class="lightbox__image-area" id="lightbox-image-area"></div>
           <div class="lightbox__caption">
             <h2 class="lightbox__title" id="lightbox-title"></h2>
-            <p class="lightbox__meta"  id="lightbox-meta"></p>
-            <p class="lightbox__desc"  id="lightbox-desc"></p>
+            <p class="lightbox__meta"   id="lightbox-meta"></p>
+            <p class="lightbox__desc"   id="lightbox-desc"></p>
           </div>
         </div>
       </div>
@@ -169,97 +165,86 @@
     <section class="collections section" id="collections" aria-labelledby="collections-heading">
       <div class="section-container">
         <header class="section-header">
-          <p class="section-eyebrow">Painting Lines</p>
-          <h2 class="section-title" id="collections-heading">Collections &amp; Series</h2>
+          <p class="section-eyebrow" data-i18n="collections.eyebrow">Linie Malarskie</p>
+          <h2 class="section-title" id="collections-heading" data-i18n="collections.heading">Kolekcje i Serie</h2>
           <div class="ornament" aria-hidden="true"><span>◆</span></div>
-          <p class="section-intro">
-            Each series is a sustained meditation on a single theme,<br>developed across months — sometimes years — of studio work.
-          </p>
+          <p class="section-intro" data-i18n="collections.intro">Każda seria to trwała medytacja nad jednym tematem, rozwijana przez miesiące — niekiedy lata — pracy w pracowni.</p>
         </header>
 
         <div class="collections__grid">
 
-          <!-- The Woven Forest -->
+          <!-- Utkany Las / The Woven Forest -->
           <article class="collection-card reveal-element">
             <div class="collection-card__image-area">
-              <!-- Replace with <img src="images/portfolio/wf-lead.jpg" alt="The Woven Forest — lead painting"> -->
               <div class="collection-card__placeholder" style="background-color: #1B4D3E;" aria-hidden="true"></div>
               <div class="collection-card__overlay">
-                <span class="collection-card__count">12 Works</span>
+                <span class="collection-card__count" data-i18n="collections.woven.count">12 Prac</span>
               </div>
             </div>
             <div class="collection-card__body">
               <div class="card-ornament" aria-hidden="true"></div>
-              <h3 class="collection-card__title">The Woven Forest</h3>
-              <p class="collection-card__years">2022 — 2024</p>
-              <p class="collection-card__description">
-                Inspired by the tangled undergrowth and ancient woodland light of the Polish highlands, this series returns to the Pre-Raphaelite obsession with botanical precision — rendered with a hallucinatory density of colour and an almost reverent stillness.
-              </p>
+              <h3 class="collection-card__title" data-i18n="collections.woven.title">Utkany Las</h3>
+              <p class="collection-card__years" data-i18n="collections.woven.years">2022 — 2024</p>
+              <p class="collection-card__description" data-i18n="collections.woven.desc">Zainspirowana splątanym podszytem i pradawnym leśnym światłem polskich wyżyn, seria powraca do prerafaelickiej obsesji na punkcie botanicznej precyzji — oddanej z halucynacyjną gęstością barwy i niemal nabożną ciszą.</p>
               <a href="#portfolio" class="collection-card__link" data-filter-target="woven-forest">
-                View Series <span aria-hidden="true">&#8594;</span>
+                <span data-i18n="collections.cta">Zobacz Serię</span> <span aria-hidden="true">&#8594;</span>
               </a>
             </div>
           </article>
 
-          <!-- Vigil -->
+          <!-- Czuwanie / Vigil -->
           <article class="collection-card reveal-element">
             <div class="collection-card__image-area">
               <div class="collection-card__placeholder" style="background-color: #4A1020;" aria-hidden="true"></div>
               <div class="collection-card__overlay">
-                <span class="collection-card__count">8 Works</span>
+                <span class="collection-card__count" data-i18n="collections.vigil.count">8 Prac</span>
               </div>
             </div>
             <div class="collection-card__body">
               <div class="card-ornament" aria-hidden="true"></div>
-              <h3 class="collection-card__title">Vigil</h3>
-              <p class="collection-card__years">2020 — 2022</p>
-              <p class="collection-card__description">
-                Painted largely during the quiet of the pandemic years, <em>Vigil</em> is a series of interior scenes and solitary figures — studies in waiting, in attention, in the texture of time when it slows to almost nothing.
-              </p>
+              <h3 class="collection-card__title" data-i18n="collections.vigil.title">Czuwanie</h3>
+              <p class="collection-card__years" data-i18n="collections.vigil.years">2020 — 2022</p>
+              <p class="collection-card__description" data-i18n="collections.vigil.desc">Malowana głównie w ciszy lat pandemii, <em>Czuwanie</em> to seria scen wnętrz i samotnych postaci — studia oczekiwania, uwagi, faktury czasu, gdy zwalnia niemal do zera.</p>
               <a href="#portfolio" class="collection-card__link" data-filter-target="vigil">
-                View Series <span aria-hidden="true">&#8594;</span>
+                <span data-i18n="collections.cta">Zobacz Serię</span> <span aria-hidden="true">&#8594;</span>
               </a>
             </div>
           </article>
 
-          <!-- Remnants -->
+          <!-- Pozostałości / Remnants -->
           <article class="collection-card reveal-element">
             <div class="collection-card__image-area">
               <div class="collection-card__placeholder" style="background-color: #3A2010;" aria-hidden="true"></div>
               <div class="collection-card__overlay">
-                <span class="collection-card__count">10 Works</span>
+                <span class="collection-card__count" data-i18n="collections.remnants.count">10 Prac</span>
               </div>
             </div>
             <div class="collection-card__body">
               <div class="card-ornament" aria-hidden="true"></div>
-              <h3 class="collection-card__title">Remnants</h3>
-              <p class="collection-card__years">2017 — 2020</p>
-              <p class="collection-card__description">
-                Objects left behind: a dress on a chair, flowers at the edge of wilting, a half-empty glass. <em>Remnants</em> explores the afterimage of presence — what a room holds of a person long after they have left it.
-              </p>
+              <h3 class="collection-card__title" data-i18n="collections.remnants.title">Pozostałości</h3>
+              <p class="collection-card__years" data-i18n="collections.remnants.years">2017 — 2020</p>
+              <p class="collection-card__description" data-i18n="collections.remnants.desc">Przedmioty zostawione: suknia na krześle, kwiaty na granicy więdnięcia, napoczęty kieliszek. <em>Pozostałości</em> bada powidok obecności — co pokój zachowuje z człowieka długo po jego odejściu.</p>
               <a href="#portfolio" class="collection-card__link" data-filter-target="remnants">
-                View Series <span aria-hidden="true">&#8594;</span>
+                <span data-i18n="collections.cta">Zobacz Serię</span> <span aria-hidden="true">&#8594;</span>
               </a>
             </div>
           </article>
 
-          <!-- Studies -->
+          <!-- Studia / Studies -->
           <article class="collection-card reveal-element">
             <div class="collection-card__image-area">
               <div class="collection-card__placeholder" style="background-color: #1A2D5A;" aria-hidden="true"></div>
               <div class="collection-card__overlay">
-                <span class="collection-card__count">16 Works</span>
+                <span class="collection-card__count" data-i18n="collections.studies.count">16 Prac</span>
               </div>
             </div>
             <div class="collection-card__body">
               <div class="card-ornament" aria-hidden="true"></div>
-              <h3 class="collection-card__title">Studies</h3>
-              <p class="collection-card__years">Ongoing</p>
-              <p class="collection-card__description">
-                An ever-growing archive of smaller works: figure studies, colour experiments, portraits, and sketches in oil. The Studies series offers a window into the daily practice and evolving vocabulary of the studio.
-              </p>
+              <h3 class="collection-card__title" data-i18n="collections.studies.title">Studia</h3>
+              <p class="collection-card__years" data-i18n="collections.studies.years">W toku</p>
+              <p class="collection-card__description" data-i18n="collections.studies.desc">Stale rozrastające się archiwum mniejszych prac: studia postaci, eksperymenty z kolorem, portrety i szkice olejne. Seria Studia otwiera okno na codzienną praktykę i ewoluujący język pracowni.</p>
               <a href="#portfolio" class="collection-card__link" data-filter-target="studies">
-                View Series <span aria-hidden="true">&#8594;</span>
+                <span data-i18n="collections.cta">Zobacz Serię</span> <span aria-hidden="true">&#8594;</span>
               </a>
             </div>
           </article>
@@ -274,43 +259,43 @@
     <section class="contact section section--dark" id="contact" aria-labelledby="contact-heading">
       <div class="section-container">
         <header class="section-header section-header--light">
-          <p class="section-eyebrow section-eyebrow--gold">Get in Touch</p>
-          <h2 class="section-title section-title--light" id="contact-heading">Contact</h2>
+          <p class="section-eyebrow section-eyebrow--gold" data-i18n="contact.eyebrow">Skontaktuj się</p>
+          <h2 class="section-title section-title--light" id="contact-heading" data-i18n="contact.heading">Kontakt</h2>
           <div class="ornament ornament--gold" aria-hidden="true"><span>◆</span></div>
-          <p class="section-intro section-intro--light">For commissions, exhibitions, acquisitions, and press enquiries.</p>
+          <p class="section-intro section-intro--light" data-i18n="contact.intro">Zamówienia, wystawy, zakup prac oraz zapytania prasowe.</p>
         </header>
 
         <div class="contact__layout">
           <!-- Form -->
           <div class="contact__form-wrap reveal-element">
-            <form class="contact-form" id="contact-form" novalidate aria-label="Contact form">
+            <form class="contact-form" id="contact-form" novalidate aria-label="Formularz kontaktowy">
               <div class="form-group">
-                <label for="contact-name" class="form-label">Name</label>
-                <input type="text"  id="contact-name"    name="name"    class="form-input" required autocomplete="name"  placeholder="Your full name">
+                <label for="contact-name"    class="form-label" data-i18n="form.name.label">Imię i nazwisko</label>
+                <input type="text"  id="contact-name"    name="name"    class="form-input" required autocomplete="name"  data-i18n-placeholder="form.name.placeholder" placeholder="Twoje imię i nazwisko">
                 <span class="form-error" role="alert" aria-live="polite"></span>
               </div>
               <div class="form-group">
-                <label for="contact-email" class="form-label">Email</label>
-                <input type="email" id="contact-email"   name="email"   class="form-input" required autocomplete="email" placeholder="your@email.com">
+                <label for="contact-email"   class="form-label" data-i18n="form.email.label">Adres e-mail</label>
+                <input type="email" id="contact-email"   name="email"   class="form-input" required autocomplete="email" data-i18n-placeholder="form.email.placeholder" placeholder="twoj@email.com">
                 <span class="form-error" role="alert" aria-live="polite"></span>
               </div>
               <div class="form-group">
-                <label for="contact-subject" class="form-label">Subject</label>
+                <label for="contact-subject" class="form-label" data-i18n="form.subject.label">Temat</label>
                 <select id="contact-subject" name="subject" class="form-select">
-                  <option value="">Select an enquiry type…</option>
-                  <option value="commission">Commission a Painting</option>
-                  <option value="exhibition">Exhibition / Gallery</option>
-                  <option value="purchase">Purchase an Existing Work</option>
-                  <option value="press">Press / Editorial</option>
-                  <option value="general">General Enquiry</option>
+                  <option value=""          data-i18n="form.subject.default">Wybierz rodzaj zapytania…</option>
+                  <option value="commission" data-i18n="form.subject.commission">Zamówienie obrazu</option>
+                  <option value="exhibition" data-i18n="form.subject.exhibition">Wystawa / Galeria</option>
+                  <option value="purchase"   data-i18n="form.subject.purchase">Zakup istniejącej pracy</option>
+                  <option value="press"      data-i18n="form.subject.press">Prasa / Redakcja</option>
+                  <option value="general"    data-i18n="form.subject.general">Zapytanie ogólne</option>
                 </select>
               </div>
               <div class="form-group">
-                <label for="contact-message" class="form-label">Message</label>
-                <textarea id="contact-message" name="message" class="form-textarea" required rows="6" placeholder="Tell me about your project or enquiry…"></textarea>
+                <label for="contact-message" class="form-label" data-i18n="form.message.label">Wiadomość</label>
+                <textarea id="contact-message" name="message" class="form-textarea" required rows="6" data-i18n-placeholder="form.message.placeholder" placeholder="Opowiedz mi o swoim projekcie lub zapytaniu…"></textarea>
                 <span class="form-error" role="alert" aria-live="polite"></span>
               </div>
-              <button type="submit" class="btn btn--gold btn--full-width">Send Message</button>
+              <button type="submit" class="btn btn--gold btn--full-width" data-i18n="form.send">Wyślij wiadomość</button>
               <div class="form-status" id="form-status" role="alert" aria-live="assertive" hidden></div>
             </form>
           </div>
@@ -318,15 +303,15 @@
           <!-- Info -->
           <div class="contact__info reveal-element">
             <div class="contact__info-block">
-              <h3 class="contact__info-title">Studio</h3>
-              <p class="contact__info-text">Poland</p>
+              <h3 class="contact__info-title" data-i18n="contact.studio.label">Pracownia</h3>
+              <p class="contact__info-text" data-i18n="contact.studio.value">Polska</p>
             </div>
             <div class="contact__info-block">
-              <h3 class="contact__info-title">Email</h3>
+              <h3 class="contact__info-title" data-i18n="contact.email.label">E-mail</h3>
               <a href="mailto:studio@grazynakrzeminska.com" class="contact__info-link">studio@grazynakrzeminska.com</a>
             </div>
             <div class="contact__info-block">
-              <h3 class="contact__info-title">Follow</h3>
+              <h3 class="contact__info-title" data-i18n="contact.follow.label">Obserwuj</h3>
               <div class="social-links">
                 <a href="#" class="social-link" aria-label="Instagram" target="_blank" rel="noopener noreferrer">
                   <svg class="social-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
@@ -346,7 +331,7 @@
             </div>
             <div class="contact__availability">
               <span class="availability-dot" aria-hidden="true"></span>
-              <span>Currently accepting commissions</span>
+              <span data-i18n="contact.availability">Aktualnie przyjmuję zamówienia</span>
             </div>
           </div>
         </div>
@@ -361,13 +346,13 @@
   <footer class="site-footer" role="contentinfo">
     <div class="site-footer__inner">
       <p class="site-footer__name">Grażyna Krzemińska</p>
-      <p class="site-footer__copy">&copy; <span id="footer-year"></span> All rights reserved.</p>
-      <nav class="site-footer__nav" aria-label="Footer navigation">
-        <a href="#home">Home</a>
-        <a href="#about">About</a>
-        <a href="#portfolio">Portfolio</a>
-        <a href="#collections">Collections</a>
-        <a href="#contact">Contact</a>
+      <p class="site-footer__copy">&copy; <span id="footer-year"></span> <span data-i18n="footer.rights">Wszelkie prawa zastrzeżone.</span></p>
+      <nav class="site-footer__nav" aria-label="Nawigacja stopki">
+        <a href="#home"        data-i18n="nav.home">Strona główna</a>
+        <a href="#about"       data-i18n="nav.about">O artystce</a>
+        <a href="#portfolio"   data-i18n="nav.portfolio">Portfolio</a>
+        <a href="#collections" data-i18n="nav.collections">Kolekcje</a>
+        <a href="#contact"     data-i18n="nav.contact">Kontakt</a>
       </nav>
     </div>
   </footer>

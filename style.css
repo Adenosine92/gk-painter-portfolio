@@ -410,7 +410,65 @@ button {
   transform: translateY(-6.5px) rotate(-45deg);
 }
 
-/* 9. HERO */
+/* 9. LANGUAGE SWITCHER */
+.lang-switch {
+  display: flex;
+  align-items: center;
+  gap: 0;
+  margin-left: 1rem;
+  z-index: 1001; /* float above mobile menu overlay (flex child stacking context) */
+}
+
+.lang-sep {
+  font-family: var(--font-ui);
+  font-size: 0.55rem;
+  color: rgba(250,246,239,0.28);
+  margin: 0 0.05rem;
+  user-select: none;
+  pointer-events: none;
+}
+
+.lang-btn {
+  font-family: var(--font-ui);
+  font-size: 0.65rem;
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: rgba(250,246,239,0.42);
+  padding: 0.32rem 0.55rem;
+  border-radius: 2px;
+  border-bottom: 1px solid transparent;
+  transition: color var(--t-fast), border-color var(--t-fast);
+}
+
+.lang-btn.is-active {
+  color: var(--color-gold-pale);
+  border-bottom-color: var(--color-gold);
+}
+
+.lang-btn:hover:not(.is-active) {
+  color: rgba(250,246,239,0.78);
+}
+
+.site-header--scrolled .lang-sep {
+  color: var(--color-parchment);
+}
+
+.site-header--scrolled .lang-btn {
+  color: var(--color-text-muted);
+}
+
+.site-header--scrolled .lang-btn.is-active {
+  color: var(--color-gold);
+  border-bottom-color: var(--color-gold);
+}
+
+.site-header--scrolled .lang-btn:hover:not(.is-active) {
+  color: var(--color-text-secondary);
+}
+
+/* 10. HERO */
 .hero {
   position: relative;
   height: 100dvh;
